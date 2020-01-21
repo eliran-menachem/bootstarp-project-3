@@ -68,13 +68,176 @@
 
             <li class="nav-item">
               <a href="login.html" class="nav-link">
-                <i class="fas fa-user-times"></i>  Logout
+                <i class="fas fa-user-times"></i> Logout
               </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- HEADER -->
+    <header id="main-header" class="py-2 bg-primary text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1><i class="fas fa-cog"></i> Dashboard</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ACTIONS -->
+    <section id="actions" class="py-4 mb-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a
+              href="#"
+              class="byn btn-primary btn-block"
+              data-toggle="modal"
+              data-target="#addPostModal"
+            >
+              <i class="fas fa-plus"></i> Add Post
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a
+              href=""
+              class="byn btn-success btn-block"
+              data-toggle="modal"
+              data-target="#addCategoryModal"
+            >
+              <i class="fas fa-plus"></i> Add Category
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a
+              href=""
+              class="byn btn-warning btn-block"
+              data-toggle="modal"
+              data-target="#addUserModal"
+            >
+              <i class="fas fa-plus"></i> Add user
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MODALS -->
+    <!-- ADD POST MODAL -->
+    <div class="modal fade" id="addPostModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Add Post</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control">
+                  <option value="">Web Development</option>
+                  <option value="">Tech Gadgets</option>
+                  <option value="">Business</option>
+                  <option value="">Health & Wellness</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="image">Upload Image</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="image" />
+                  <label for="image" class="custom-file-label"
+                    >Choose File</label
+                  >
+                </div>
+                <small class="form-text text-muted">Max size 3mb</small>
+              </div>
+              <div class="form-group">
+                <label for="body">Body</label>
+                <textarea name="editor1" class="form-control"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-dismiss="modal">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ADD CATEGORY MODAL -->
+    <div class="modal fade" id="addCategoryModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Add Category</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ADD USER MODAL -->
+    <div class="modal fade" id="addUserModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title">Add User</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning" data-dismiss="modal">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -91,6 +254,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     <script src="js.js"></script>
   </body>
 </html>

@@ -20,3 +20,6 @@ $("#main-nav a").on("click", function(event) {
       );
     }
   });
+
+// USE CKEditor 4 - https://cdn.ckeditor.com/
+  CKEDITOR.replace( 'editor1' );
